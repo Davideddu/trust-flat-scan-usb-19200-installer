@@ -5,7 +5,7 @@ Firmware installer for Trust Flat Scan USB 19200 on Debian-based distros.
 To install it, either run the following command:
 
 ```sh
-wget -O - "https://raw.githubusercontent.com/Davideddu/trust-flat-scan-usb-19200-installer/master/install.py" | sudo python
+wget -O - "https://raw.githubusercontent.com/Davideddu/trust-flat-scan-usb-19200-installer/master/install.py" 2> /dev/null | sudo python
 ```
 
 or just download it and run it as root:
