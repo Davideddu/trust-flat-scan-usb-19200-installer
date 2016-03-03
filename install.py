@@ -33,7 +33,7 @@ if "install ok installed" not in out:
 print "Sane is installed"
 print "Downloading and installing scanner firmware..."
 
-wget = sp.Popen(["wget", "stub", "-O", "/tmp/GT680XFW.USB"])
+wget = sp.Popen(["wget", "https://raw.githubusercontent.com/Davideddu/trust-flat-scan-usb-19200-installer/master/GT680XFW.USB", "-O", "/tmp/GT680XFW.USB"])
 wget.wait()
 
 if wget.poll() > 0:
