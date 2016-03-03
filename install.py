@@ -49,16 +49,16 @@ os.remove("/tmp/GT680XFW.USB")
 os.chmod("/usr/share/sane/gt68xx/GT680XFW.USB", 662)
 
 print "Patching /etc/sane.d/dll.conf"
-with open("/etc/sane.d/dll.conf", "rw") as f:
+with open("/etc/sane.d/dll.conf", "r") as f:
     c = f.read()
-    f.seek(0)
+with open("/etc/sane.d/dll.conf", "w") as f:
     c = re.sub(r"[#]\s*gt68xx", "gt68xx", c)
     f.write(c)
 
 print "Patching /etc/sane.d/gt68xx.conf"
-with open("/etc/sane.d/gt68xx.conf", "rw") as f:
+with open("/etc/sane.d/gt68xx.conf", "r") as f:
     c = f.read()
-    f.seek(0)
+with open("/etc/sane.d/gt68xx.conf", "w") as f:
     c = re.sub(REGEX, REPL, c)
     f.write(c)
 
